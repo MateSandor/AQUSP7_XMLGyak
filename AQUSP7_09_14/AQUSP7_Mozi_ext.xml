@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mozi>
+	<film id ="txn_nxm_2jb" mufaj="horror">
+		<rendezo id="nzk_4xm_2jb" nev="alex"/>
+		<szinesz id="u5q_4xm_2jb" nev="Madison_Ivy"/>
+		<szinesz id="ujsz">
+			<gyerekszinesz id="gysz"></gyerekszinesz>
+			<musicalszinesz id="musz"></musicalszinesz>
+			<szinkronszinesz id="szisz"></szinkronszinesz>
+		</szinesz>
+		<iro id="trv_4xm_2jb"/>
+	</film>
+	<film>
+		<producer id="prod"></producer>
+		<dramaturg id ="dram"></dramaturg>
+		<operator id="oper"></operator>
+	</film>
+
+</mozi>

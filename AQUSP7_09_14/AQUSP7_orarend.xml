@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SM_orarend id="1orar">
+
+<!-- 	<ora id="01" tipus=""> -->
+<!-- 		<targy></targy> -->
+<!-- 		<helyszin></helyszin> -->
+<!-- 		<oktato></oktato> -->
+<!-- 		<szak></szak> -->
+<!-- 		<idopont> -->
+<!-- 			<nap></nap> -->
+<!-- 			<tol></tol> -->
+<!-- 			<ig></ig> -->
+<!-- 		</idopont> -->
+<!-- 	</ora> -->
+	
+	<ora id="02" tipus="Gyak">
+		<targy>XML</targy>
+		<helyszin>In/101</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>Prog terv</szak>
+		<idopont>
+			<nap>Szerda</nap>
+			<tol>10</tol>
+			<ig>12</ig>
+		</idopont>
+	</ora>
+	
+	<ora id="03" tipus="Előadás">
+		<targy>XML</targy>
+		<helyszin>MagasFSZ</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>Prog terv</szak>
+		<idopont>
+			<nap>Kedd</nap>
+			<tol>12</tol>
+			<ig>14</ig>
+		</idopont>
+	</ora>
+	
+	<ora id="04" tipus="Előadás">
+		<targy>WEB</targy>
+		<helyszin>XXX</helyszin>
+		<oktato>Agárdi Anita</oktato>
+		<szak>Prog terv</szak>
+		<idopont>
+			<nap>Hétfő</nap>
+			<tol>8</tol>
+			<ig>10</ig>
+		</idopont>
+	</ora>
+	
+	<ora id="05" tipus="Gyak">
+		<targy>WEB</targy>
+		<helyszin>In/103</helyszin>
+		<oktato>Agárdi Anita</oktato>
+		<szak>Prog terv</szak>
+		<idopont>
+			<nap>hétfő</nap>
+			<tol>16</tol>
+			<ig>18</ig>
+		</idopont>
+	</ora>
+	
+	<ora id="06" tipus="Előadás">
+		<targy>Mesterséges Inteligencia</targy>
+		<helyszin>II</helyszin>
+		<oktato>Kunné Dr. Tamás Judit</oktato>
+		<szak>Prog terv</szak>
+		<idopont>
+			<nap>Kedd</nap>
+			<tol>9</tol>
+			<ig>12</ig>
+		</idopont>
+	</ora>
+	
+	<ora id="07" tipus="Előadás">
+		<targy>Algoritmusok</targy>
+		<helyszin>X</helyszin>
+		<oktato>Dr. Házy Attila</oktato>
+		<szak>Prog terv</szak>
+		<idopont>
+			<nap>Kedd</nap>
+			<tol>14</tol>
+			<ig>18</ig>
+		</idopont>
+	</ora>
+	
+	<ora id="08" tipus="Gyak">
+		<targy>Mesterséges Inteligencia</targy>
+		<helyszin>In/15</helyszin>
+		<oktato>Fazekas Levente</oktato>
+		<szak>Prog terv</szak>
+		<idopont>
+			<nap>Szerda</nap>
+			<tol>9</tol>
+			<ig>10</ig>
+		</idopont>
+	</ora>
+	
+	<ora id="03" tipus="Előadás">
+		<targy>Vállalati inf.</targy>
+		<helyszin>In/103</helyszin>
+		<oktato>Dr. Sasvéri Péter</oktato>
+		<szak>Prog terv</szak>
+		<idopont>
+			<nap>Szerda</nap>
+			<tol>16</tol>
+			<ig>20</ig>
+		</idopont>
+	</ora>
+</SM_orarend>

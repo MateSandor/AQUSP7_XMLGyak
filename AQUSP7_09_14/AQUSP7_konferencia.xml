@@ -1,0 +1,49 @@
+<konferencia>
+    <cim>Valamilyen utca</cim>
+    <hallgatok>
+        <hallgato id="1">
+            <nev>
+                Sándor Máté
+            </nev>
+            <lakcim>
+                Eper utca
+            </lakcim>
+        </hallgato>
+        <hallgato id="2">
+            <nev>
+                Nevem Titok
+            </nev>
+            <lakcim>
+                Alma utca
+            </lakcim>
+        </hallgato>
+    </hallgatok>
+    <helyszin>
+        Miskolci Egyetem
+    </helyszin>
+    <eloado id="10">
+        <nev>
+            Dr. István Pista
+        </nev>
+        <adoszam>
+            1234
+        </adoszam>
+        <lakcim>
+            Hurka út 20
+        </lakcim>
+    </eloado>
+    <eloado id="11">
+        <nev>
+            Dr. Doktor Pista
+        </nev>
+        <adoszam>
+            4321
+        </adoszam>
+        <lakcim>
+            Murka út 30
+        </lakcim>
+    </eloado>
+    <datum>
+        2022.09.20.
+    </datum>
+</konferencia>
