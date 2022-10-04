@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"2>
+<!DOCTYPE SM_kurzusfelvetel SYSTEM "SM_kurzusfelvetel.dtd">
+
+<SM_kurzusfelvetel tanev="2022_2023 I." egyetem="ME">
+	<hallgato id="AQUSP7.ME">
+
+	<hnev>Sándor Máté</hnev>
+	<szulev>2001.05.15</szulev>
+	<szak evf="5">Programtervezo informatikus</szak>
+	</hallgato>
+	
+	<kurzusok>
+
+		<kurzus id="GEIAL332-B">
+			<kurzusnev>Adatkezelés XML kornyezetben</kurzusnev>
+			<kredit>5</kredit>
+			<hely>XXXII.</hely>
+			<idopont>Kedd 12:00-13:30</idopont>
+			<oktato>Dr. Bednarik László</oktato>
+		</kurzus>
+
+		<kurzus id="GEIAL322-B" jovahagyas="igen">
+			<kurzusnev>Adatbazis rendszerek I.</kurzusnev>
+			<kredit>5</kredit>
+			<hely>In101</hely>
+			<idopont>Kedd 08:00-09:30</idopont>
+			<oktato>Dr. Kovacs László</oktato>
+		</kurzus>
+
+		<kurzus id="GEIAL333-B" nyelv="angol">
+			<kurzusnev>Webalkalmazas fejlesztés-Java</kurzusnev>
+			<kredit>5</kredit>
+			<hely>In103</hely>
+			<idopont>Csütörtök 08:00-09:30</idopont>
+			<oktato>Dr. Barabas Péter</oktato>
+			<oraado>Tóth Bence</oraado>
+		</kurzus>
+
+	</kurzusok>
+
+</SM_kurzusfelvetel>
