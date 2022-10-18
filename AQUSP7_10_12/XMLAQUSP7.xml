@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vendeglatas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="SM">
+
+<!--Ettermek-->
+<etterem ekod="e1">
+	<nev>Véndiófa</nev>
+	 <cím>
+	 	<varos>Miskolc</varos>
+	 	<utca>Diósgyőr</utca>
+	 	<hazszam>110</hazszam>
+	 </cím>
+</etterem>
+
+<!--Foszakacsok-->
+<foszakacs fkod="f1" e_f="e1">
+	<nev>Valaki János</nev>
+	<eletkor>30</eletkor>
+	<vegzettseg>Középiskola</vegzettseg>
+	<vegzettseg>Targonca vezető</vegzettseg>
+</foszakacs>
+
+<foszakacs fkod="f1" e_f="e1">
+	<nev>John Doe</nev>
+	<eletkor>69</eletkor>
+	<vegzettseg>Általános iskola</vegzettseg>
+	<vegzettseg>Fa szállító</vegzettseg>
+</foszakacs>
+
+
+<!-- Szakacsok -->
+<szakacs szkod="sz1" e_sz="e1">
+	<nev>Vicc Elek</nev>
+	<reszleg>Detox</reszleg>
+	<vegzettseg>Sörnyelő</vegzettseg>
+	<vegzettseg>Kolimpikus</vegzettseg>
+	<vegzettseg>Csúszdakezelő</vegzettseg>
+</szakacs>
+
+<szakacs szkod="sz1" e_sz="e1">
+	<nev>Csing Chang</nev>
+	<reszleg>Wok</reszleg>
+	<vegzettseg>Szánsájn egyetem</vegzettseg>
+</szakacs>
+
+<!-- Gyakornokok -->
+<gyakornok id="gy1" e_gy="e1">
+	<nev>Oliver Liver</nev>
+	<gyakorlat>
+		<kezdete>2010.01.01</kezdete>
+		<idotartama>10 év</idotartama>
+	</gyakorlat>
+	<muszak>Délelőtt</muszak>
+</gyakornok>
+
+<!-- Vendég -->
+<vendeg id="v1">
+	<nev>Hurrikán Hugó</nev>
+	<eletkor>20</eletkor>
+	<cim>
+		<varos>Miskolc</varos>
+		<utca>Corvin</utca>
+		<hazszam>3</hazszam>
+	</cim>
+</vendeg>
+
+<!-- Rendelések -->
+<rendeles e_v_e="e1" e_v_V="v1">
+	<osszeg>10000</osszeg>
+	<etel>Burgir</etel>
+</rendeles>
+
+<rendeles e_v_e="e2" e_v_V="v2">
+	<osszeg>100</osszeg>
+	<etel>Százas</etel>
+</rendeles>
+
+<rendeles e_v_e="e3" e_v_V="v3">
+	<osszeg>9989</osszeg>
+	<etel>4 Season pizza</etel>
+</rendeles>
+
+</vendeglatas>
+
+
+
+
+
+
+
+
+
+
+
+
+
