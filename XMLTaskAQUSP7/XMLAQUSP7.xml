@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Emag xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="XMLSchemaAQUSP7.xsd">
+
+    <!-- Cimek-->
+    <Cim Cid="c1">
+        <iranyitoszam>3720</iranyitoszam>
+        <varos>Sajokaza</varos>
+        <utca>Majus 1 út</utca>
+        <hazszam>11</hazszam>
+    </Cim>
+
+    <Cim Cid="c2">
+        <iranyitoszam>3720</iranyitoszam>
+        <varos>Sajoivanka</varos>
+        <utca>Petofi Sandor</utca>
+        <hazszam>2</hazszam>
+    </Cim>
+
+    <Cim Cid="c3">
+        <iranyitoszam>3700</iranyitoszam>
+        <varos>Kazincbarcika</varos>
+        <utca>Majus 1 út</utca>
+        <hazszam>3</hazszam>
+    </Cim>
+
+    <Cim Cid="c4">
+        <iranyitoszam>3530</iranyitoszam>
+        <varos>Miskolc</varos>
+        <utca>Szent istvan</utca>
+        <hazszam>47</hazszam>
+    </Cim>
+
+    <Cim Cid="c5">
+        <iranyitoszam>3530</iranyitoszam>
+        <varos>Miskolc</varos>
+        <utca>Joyson utca</utca>
+        <hazszam>1</hazszam>
+    </Cim>
+
+    <!-- Gyartok-->
+    <Gyarto Gyid="gy1" FTid="t1" FCid="c4">
+        <ertekeles>5</ertekeles>
+        <gyartonev>Makita</gyartonev>
+        <elerhetosegek>Makita.eu</elerhetosegek>
+    </Gyarto>
+
+    <Gyarto Gyid="gy2" FTid="t2" FCid="c5">
+        <ertekeles>2</ertekeles>
+        <gyartonev>LaptopShop</gyartonev>
+        <elerhetosegek>+36702682881</elerhetosegek>
+    </Gyarto>
+
+    <Gyarto Gyid="gy3" FTid="t3" FCid="c2">
+        <ertekeles>4</ertekeles>
+        <gyartonev>Ikea</gyartonev>
+        <elerhetosegek>Ikea.com</elerhetosegek>
+    </Gyarto>
+
+    <!-- Termékek-->
+    <Termek Tid="t1">
+        <termeknev>Elektromos funyíro</termeknev>
+        <tipus>Elektronika</tipus>
+        <egysegar>70000</egysegar>
+    </Termek>
+
+    <Termek Tid="t2">
+        <termeknev>Thinkpad T450</termeknev>
+        <tipus>Elektronika</tipus>
+        <egysegar>200000</egysegar>
+    </Termek>
+
+    <Termek Tid="t3">
+        <termeknev>Skorgjorn parna</termeknev>
+        <tipus>Butor</tipus>
+        <egysegar>8000</egysegar>
+    </Termek>
+
+    <!-- Tartalmazza-->
+    <Tartalmazza Taid="t1" FTid="t1" FRid="r1">
+        <darab>1</darab>
+    </Tartalmazza>
+
+    <Tartalmazza Taid="t2" FTid="t2" FRid="r2">
+        <darab>2</darab>
+    </Tartalmazza>
+
+    <Tartalmazza Taid="t3" FTid="t3" FRid="r3">
+        <darab>1</darab>
+    </Tartalmazza>
+
+    <!-- Rendelesek-->
+    <Rendeles Rid="r1">
+        <osszertek>270000</osszertek>
+        <datum>
+            <ev>2022</ev>
+            <honap>11</honap>
+            <nap>22</nap>
+        </datum>
+    </Rendeles>
+
+    <Rendeles Rid="r2">
+        <osszertek></osszertek>
+        <datum>
+            <ev>2022</ev>
+            <honap>10</honap>
+            <nap>5</nap>
+        </datum>
+    </Rendeles>
+
+    <Rendeles Rid="r3">
+        <osszertek></osszertek>
+        <datum>
+            <ev>2021</ev>
+            <honap>12</honap>
+            <nap>21</nap>
+        </datum>
+    </Rendeles>
+
+    <!-- Vevok-->
+    <Vevo Vid="v1" FNid="n1" FCid="c1" FRid="r1">
+        <pontok>110</pontok>
+    </Vevo>
+
+    <Vevo Vid="v2" FNid="n2" FCid="c2" FRid="r2">
+        <pontok>0</pontok>
+    </Vevo>
+
+    <Vevo Vid="v3" FNid ="n3" FCid="c3" FRid="r3">
+        <pontok>10</pontok>
+    </Vevo>
+
+    <!-- Nevek-->
+    <Nev Nid="n1">
+        <vezeteknev>Sandor</vezeteknev>
+        <keresztnev>Mate</keresztnev>
+    </Nev>
+
+    <Nev Nid="n2">
+        <vezeteknev>Joska</vezeteknev>
+        <keresztnev>Gyurka</keresztnev>
+    </Nev>
+
+    <Nev Nid="n3">
+        <vezeteknev>Gabor</vezeteknev>
+        <keresztnev>Aron</keresztnev>
+    </Nev>
+
+
+</Emag>
