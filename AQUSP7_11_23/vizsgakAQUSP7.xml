@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root id='AQUSP7'>
+  <name>vizsgak</name>
+  <vizsgak>
+    <vizsga>
+      <helyszín>Miskolc</helyszín>
+      <kurzus>ProgAl</kurzus>
+      <oktato>Baks</oktato>
+      <jegy>2</jegy>
+      <idopont>
+        <nap>hetfo</nap>
+        <tol>10</tol>
+        <ig>12</ig>
+      </idopont>
+    </vizsga>
+    <vizsga>
+      <helyszín>Budapest</helyszín>
+      <kurzus>XML</kurzus>
+      <oktato>Bedn</oktato>
+      <jegy>4</jegy>
+      <idopont>
+        <nap>szerda</nap>
+        <tol>9</tol>
+        <ig>11</ig>
+      </idopont>
+    </vizsga>
+  </vizsgak>
+</root>

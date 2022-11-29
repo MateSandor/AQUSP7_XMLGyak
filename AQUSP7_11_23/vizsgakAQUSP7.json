@@ -1,0 +1,30 @@
+{
+    "_id": "AQUSP7",
+    "name": "vizsgak",
+        "vizsgak": {
+            "vizsga": [
+                {
+                    "helyszín": "Miskolc",
+                    "kurzus": "ProgAl",
+                    "oktato": "Baks",
+                    "jegy": "2",
+                    "idopont": {
+                        "nap": "hetfo",
+                        "tol": "10",
+                        "ig": "12"
+                    }
+                },
+                {
+                    "helyszín": "Budapest",
+                    "kurzus": "XML",
+                    "oktato": "Bedn",
+                    "jegy": "4",
+                    "idopont": {
+                        "nap": "szerda",
+                        "tol": "9",
+                        "ig": "11"
+                    }
+                }
+            ]
+        }
+    }
