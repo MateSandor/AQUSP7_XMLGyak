@@ -1,149 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:simpleType name="felnottE">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="Igen" />
+            <xs:enumeration value="Nem" />
+        </xs:restriction>
+    </xs:simpleType>
+
+	<!-- Felépítés-->
+
     <xs:element name="Emag">
+	
+		<!-- Fő elemek-->
+	
         <xs:complexType>
             <xs:sequence>
-                <xs:element maxOccurs="unbounded" name="Cim">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="iranyitoszam" type="xs:integer" />
-                            <xs:element name="varos" type="xs:string" />
-                            <xs:element name="utca" type="xs:string" />
-                            <xs:element name="hazszam" type="xs:integer" />
-                        </xs:sequence>
-                        <xs:attribute name="Cid" type="xs:string" use="required" />
-                    </xs:complexType>
-                </xs:element>
-                <xs:element maxOccurs="unbounded" name="Gyarto">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="ertekeles" type="xs:integer" />
-                            <xs:element name="gyartonev" type="xs:string" />
-                            <xs:element name="elerhetosegek" type="xs:string" />
-                        </xs:sequence>
-                        <xs:attribute name="Gyid" type="xs:string" use="required" />
-                        <xs:attribute name="FTid" type="xs:string" use="required" />
-                        <xs:attribute name="FCid" type="xs:string" use="required" />
-                    </xs:complexType>
-                </xs:element>
-                <xs:element maxOccurs="unbounded" name="Termek">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="termeknev" type="xs:string" />
-                            <xs:element name="tipus" type="xs:string" />
-                            <xs:element name="egysegar" type="xs:integer" />
-                        </xs:sequence>
-                        <xs:attribute name="Tid" type="xs:string" use="required" />
-                    </xs:complexType>
-                </xs:element>
-                <xs:element maxOccurs="unbounded" name="Tartalmazza">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="darab" type="xs:integer" />
-                        </xs:sequence>
-                        <xs:attribute name="Taid" type="xs:string" use="required" />
-                        <xs:attribute name="FTid" type="xs:string" use="required" />
-                        <xs:attribute name="FRid" type="xs:string" use="required" />
-                    </xs:complexType>
-                </xs:element>
-                <xs:element maxOccurs="unbounded" name="Rendeles">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="osszertek" type="xs:string" nillable="true"/>
-                            <xs:element name="datum">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="ev" type="xs:integer" />
-                                        <xs:element name="honap" type="xs:integer" />
-                                        <xs:element name="nap" type="xs:integer" />
-                                    </xs:sequence>
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                        <xs:attribute name="Rid" type="xs:string" use="required" />
-                    </xs:complexType>
-                </xs:element>
-                <xs:element maxOccurs="unbounded" name="Vevo">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="pontok" type="xs:integer" />
-                        </xs:sequence>
-                        <xs:attribute name="Vid" type="xs:string" use="required" />
-                        <xs:attribute name="FNid" type="xs:string" use="required" />
-                        <xs:attribute name="FCid" type="xs:string" use="required" />
-                        <xs:attribute name="FRid" type="xs:string" use="required" />
-                    </xs:complexType>
-                </xs:element>
-                <xs:element maxOccurs="unbounded" name="Nev">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="vezeteknev" type="xs:string" />
-                            <xs:element name="keresztnev" type="xs:string" />
-                        </xs:sequence>
-                        <xs:attribute name="Nid" type="xs:string" use="required" />
-                    </xs:complexType>
-                </xs:element>
+                <xs:element maxOccurs="unbounded" name="Cim"/>
+                <xs:element maxOccurs="unbounded" name="Gyarto"/>
+                <xs:element maxOccurs="unbounded" name="Termek"/>
+                <xs:element maxOccurs="unbounded" name="Tartalmazza"/>
+                <xs:element maxOccurs="unbounded" name="Rendeles"/>
+                <xs:element maxOccurs="unbounded" name="Vevo"/>
+                <xs:element maxOccurs="unbounded" name="Nev"/>
             </xs:sequence>
         </xs:complexType>
 		
 		<!-- Kulcsok-->
 
-		<xs:key name="Cid">
+		<xs:key name="cimKulcs">
             <xs:selector xpath="Cim" />
             <xs:field xpath="@Cid" />
         </xs:key>
 
-        <xs:key name="Gyid">
+        <xs:key name="gyartoKulcs">
             <xs:selector xpath="Gyarto" />
             <xs:field xpath="@Gyid" />
         </xs:key>
 
-        <xs:key name="Tid">
+        <xs:key name="termekKulcs">
             <xs:selector xpath="Termek" />
             <xs:field xpath="@nev" />
         </xs:key>
 
-        <xs:key name="Taid">
+        <xs:key name="tartalmazzaKulcs">
             <xs:selector xpath="Tartalmazza" />
             <xs:field xpath="@Taid" />
         </xs:key>
 
-        <xs:key name="Vid">
+        <xs:key name="vevoKulcs">
             <xs:selector xpath="Vevo" />
             <xs:field xpath="@Vid" />
         </xs:key>
 
-        <xs:key name="Nid">
+        <xs:key name="nevKulcs">
             <xs:selector xpath="Nev" />
             <xs:field xpath="@Nid" />
         </xs:key>
         
         <!-- Idegen kulcsok -->
 
-        <xs:keyref refer="Cid" name="Cim_idegen_kulcs">
-            <xs:selector xpath="Rendeles" />
-            <xs:field xpath="@FCid" />
-        </xs:keyref>
-
-        <xs:keyref refer="Gyid" name="Gyarto_idegen_kulcs">
-            <xs:selector xpath="Rendeles" />
-            <xs:field xpath="@FGyid" />
-        </xs:keyref>
-
-        <xs:keyref refer="Tid" name="Termek_Cim_idegen_kulcs">
-            <xs:selector xpath="Cim" />
-            <xs:field xpath="@FTid" />
-        </xs:keyref>
-
-        <xs:keyref refer="Cid" name="Cim_Tartalmazza_idegen_kulcs">
-            <xs:selector xpath="Tartalmazza" />
-            <xs:field xpath="@FCid" />
-        </xs:keyref>
-
-        <xs:keyref refer="Gyid" name="Gyarto_Tartalmazza_idegen_kulcs">
-            <xs:selector xpath="Tartalmazza" />
-            <xs:field xpath="@FGyid" />
+        <xs:keyref refer="cimKulcs" name="cimVevoIdegenKulcs">
+            <xs:selector xpath="Vevo" />
+            <xs:field xpath="@FVeCid" />
         </xs:keyref>
 		
+		 <xs:keyref refer="cimKulcs" name="cimTartalmazzaIdegenKulcs">
+            <xs:selector xpath="Tartalmazza" />
+            <xs:field xpath="@FTaCid" />
+        </xs:keyref>
+
+        <xs:keyref refer="termekKulcs" name="termekGyartoIdegenKulcs">
+            <xs:selector xpath="Gyarto" />
+            <xs:field xpath="@FGyTid" />
+        </xs:keyref>
+		
+		<xs:keyref refer="termekKulcs" name="termekTartalmazzaIdegenKulcs">
+            <xs:selector xpath="Tartalmazza" />
+            <xs:field xpath="@FTaTid" />
+        </xs:keyref>
+
+        <xs:keyref refer="rendelesKulcs" name="rendelesTartalmazzaIdegenKulcs">
+            <xs:selector xpath="Tartalmazza" />
+            <xs:field xpath="@FTaRid" />
+        </xs:keyref>
+		
+		<xs:keyref refer="rendelesKulcs" name="rendelesVevoIdegenKulcs">
+            <xs:selector xpath="Vevo" />
+            <xs:field xpath="@FVeRid" />
+        </xs:keyref>
+	
+		<!-- Unique -->
+		<xs:unique name="nevVevoIdegenKulcs">
+			<xs:selector xpath="Nev"/>
+			<xs:field xpath="@FVeNid"/>
+		</xs:unique>
+		
+	</xs:element>
+	
+	<!-- További elemek-->
+	<xs:element name="Cim">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="iranyitoszam" type="xs:integer" />
+                <xs:element name="varos" type="xs:string" />
+                <xs:element name="utca" type="xs:string" />
+				<xs:element name="hazszam" type="xs:integer" />
+            </xs:sequence>
+        </xs:complexType>
     </xs:element>
+	
+	<xs:element name="Gyarto">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ertekeles" type="xs:integer" />
+                <xs:element name="gyartonev" type="xs:string" />
+                <xs:element name="elerhetosegek" type="xs:string" maxOccurs="unbounded"/>				
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="Termek">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="termeknev" type="xs:string" />
+                <xs:element name="tipus" type="xs:string" />
+                <xs:element name="egysegar" type="xs:integer" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="Tartalmazza">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="darab" type="xs:integer" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="Rendeles">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="osszertek" type="xs:integer" />
+                <xs:element name="datum">
+					<xs:complexType>
+						<xs:element name="ev" type="xs:string" />
+						<xs:element name="honap" type="xs:string" />
+						<xs:element name="nap" type="xs:string" />
+					</xs:complexType>
+				</xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="Vevo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pontok" type="xs:integer" />
+				<xs:element name="felnott" type="felnottE"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="Nev">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vezeteknev" type="xs:string" />
+				<xs:element name="keresztnev" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+	
 </xs:schema>

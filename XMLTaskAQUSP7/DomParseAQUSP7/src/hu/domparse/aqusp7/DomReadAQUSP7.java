@@ -25,49 +25,41 @@ public class DomReadAQUSP7 {
 		Document doc = dBuilder.parse(file);
 		
 		doc.getDocumentElement().normalize();
+		
 		//Gyökérelem
 		System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
 		//Gyerekelemek lementése
 		NodeList nList = (NodeList) doc.getDocumentElement();
 		
-		
-		for (int i = 0; i < nList.getLength(); i++) {
-			Node node = nList.item(i);
-			
-			//Ha Cim
-			if(node.getNodeName() == "Cim"){
-				if(!node.getNodeName().equals("#text")) {
-					System.out.println("\n");
-					System.out.println("Current element: " + node.getNodeName());
-				}
-				//Cím adatainak kiírása
-				if(node.getNodeType()==Node.ELEMENT_NODE) {
-					Element elem = (Element) node;
+		for(int i = 0; i < nList.getLength(); i++)
+        {
+        	Node node = nList.item(i);
+        	if(!(node.getNodeName().equals("#comment")||node.getNodeName().equals("#text")))
+        	{
+	            System.out.println("\nJelenlegi elem: " + node.getNodeName());
 	
-					String cid = elem.getAttribute("Cid");
+	            if(node.getNodeType() == Node.ELEMENT_NODE)
+	            {
+	            	Element elem = (Element) node;
 	
-					Node cim_node = elem.getElementsByTagName("iranyitoszam").item(0);
-					String iranyitoszam = cim_node.getTextContent();
+	            	NodeList nList2 = elem.getChildNodes();
 	
-					Node cim_node2 = elem.getElementsByTagName("varos").item(0);
-					String varos = cim_node2.getTextContent();
+	            	for(int j = 0; j < nList2.getLength(); j++)
+	                {
+	            		Node node2 = nList2.item(j);
 	
-					Node cim_node3 = elem.getElementsByTagName("utca").item(0);
-					String utca = cim_node3.getTextContent();
-					
-					Node cim_node4 = elem.getElementsByTagName("hazszam").item(0);
-					String hazszam = cim_node4.getTextContent();
+						if(node2.getNodeType() == Node.ELEMENT_NODE)
+	                    {
+							System.out.println(node2.getNodeName() + " : " + node2.getTextContent());
+							
+						}
+					}
+	            }
+        	}
+        }
 	
-					System.out.printf("Cid: %s%n", cid);
-					System.out.printf("Iranyitoszam: %s%n", iranyitoszam);
-					System.out.printf("Varos: %s%n", varos);
-					System.out.printf("Utca: %s%n", utca);
-					System.out.printf("Hazszam: %s%n", hazszam);
-				}
-			}
 			
 			
 		}
 	}
 
-}

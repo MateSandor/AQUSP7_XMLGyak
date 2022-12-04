@@ -138,7 +138,7 @@ public class DomModifyAQUSP7
                 Node tartalmazza = tartalmazzaList.item(i);
 
                 // Lekéri az "FRid" attribútum értékét és eltárolja az "id"-ben
-                String id = tartalmazza.getAttributes().getNamedItem("FRid").getTextContent();
+                String id = tartalmazza.getAttributes().getNamedItem("FTaRid").getTextContent();
 
                 // Létrehozza az új "kupon" elemet
                 Element kupon = doc.createElement("kupon");

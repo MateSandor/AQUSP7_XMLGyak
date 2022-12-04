@@ -7,7 +7,7 @@ xsi:noNamespaceSchemaLocation="XMLSchemaAQUSP7.xsd">
     <Cim Cid="c1">
         <iranyitoszam>3720</iranyitoszam>
         <varos>Sajokaza</varos>
-        <utca>Majus 1 út</utca>
+        <utca>Majus 1 ut</utca>
         <hazszam>11</hazszam>
     </Cim>
 
@@ -21,7 +21,7 @@ xsi:noNamespaceSchemaLocation="XMLSchemaAQUSP7.xsd">
     <Cim Cid="c3">
         <iranyitoszam>3700</iranyitoszam>
         <varos>Kazincbarcika</varos>
-        <utca>Majus 1 út</utca>
+        <utca>Majus 1 ut</utca>
         <hazszam>3</hazszam>
     </Cim>
 
@@ -40,27 +40,27 @@ xsi:noNamespaceSchemaLocation="XMLSchemaAQUSP7.xsd">
     </Cim>
 
     <!-- Gyartok-->
-    <Gyarto Gyid="gy1" FTid="t1" FCid="c4">
+    <Gyarto Gyid="gy1" FGyTid="t1" FGyCid="c4">
         <ertekeles>5</ertekeles>
         <gyartonev>Makita</gyartonev>
         <elerhetosegek>Makita.eu</elerhetosegek>
     </Gyarto>
 
-    <Gyarto Gyid="gy2" FTid="t2" FCid="c5">
+    <Gyarto Gyid="gy2" FGyTid="t2" FGyCid="c5">
         <ertekeles>2</ertekeles>
         <gyartonev>LaptopShop</gyartonev>
-        <elerhetosegek>+36702682881</elerhetosegek>
+        <elerhetosegek></elerhetosegek>
     </Gyarto>
 
-    <Gyarto Gyid="gy3" FTid="t3" FCid="c2">
+    <Gyarto Gyid="gy3" FGyTid="t3" FGyCid="c2">
         <ertekeles>4</ertekeles>
         <gyartonev>Ikea</gyartonev>
         <elerhetosegek>Ikea.com</elerhetosegek>
     </Gyarto>
 
-    <!-- Termékek-->
+    <!-- Termekek-->
     <Termek Tid="t1">
-        <termeknev>Elektromos funyíro</termeknev>
+        <termeknev>Elektromos funyiro</termeknev>
         <tipus>Elektronika</tipus>
         <egysegar>70000</egysegar>
     </Termek>
@@ -78,15 +78,15 @@ xsi:noNamespaceSchemaLocation="XMLSchemaAQUSP7.xsd">
     </Termek>
 
     <!-- Tartalmazza-->
-    <Tartalmazza Taid="t1" FTid="t1" FRid="r1">
+    <Tartalmazza Taid="t1" FTaTid="t1" FTaRid="r1">
         <darab>1</darab>
     </Tartalmazza>
 
-    <Tartalmazza Taid="t2" FTid="t2" FRid="r2">
+    <Tartalmazza Taid="t2" FTaTid="t2" FTaRid="r2">
         <darab>2</darab>
     </Tartalmazza>
 
-    <Tartalmazza Taid="t3" FTid="t3" FRid="r3">
+    <Tartalmazza Taid="t3" FTaTid="t3" FTaRid="r3">
         <darab>1</darab>
     </Tartalmazza>
 
@@ -119,15 +119,18 @@ xsi:noNamespaceSchemaLocation="XMLSchemaAQUSP7.xsd">
     </Rendeles>
 
     <!-- Vevok-->
-    <Vevo Vid="v1" FNid="n1" FCid="c1" FRid="r1">
+    <Vevo Vid="v1" FVeNid="n1" FVeCid="c1" FVeRid="r1">
+		<felnott>Igen</felnott>
         <pontok>110</pontok>
     </Vevo>
 
-    <Vevo Vid="v2" FNid="n2" FCid="c2" FRid="r2">
+    <Vevo Vid="v2" FVeNid="n2" FVeCid="c2" FVeRid="r2">
+		<felnott>Nem</felnott>
         <pontok>0</pontok>
     </Vevo>
 
-    <Vevo Vid="v3" FNid ="n3" FCid="c3" FRid="r3">
+    <Vevo Vid="v3" FVeNid ="n3" FVeCid="c3" FVeRid="r3">
+		<felnott>Igen</felnott>
         <pontok>10</pontok>
     </Vevo>
 
